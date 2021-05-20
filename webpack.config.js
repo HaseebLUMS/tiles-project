@@ -19,6 +19,13 @@ module.exports = {
   {
    test: /\.css$/,
    loader: "style-loader!css-loader"
-  }]
+  }, {
+    test: /\.svg$/,
+    include: [/react-images-upload/],
+    loader: 'file-loader',
+    options: {
+     name: '[name].[ext]?[hash]'
+    }
+   }]
  }
 }
